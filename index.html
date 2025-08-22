@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anjali Kumari Jaiswal | Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+  --bg: #FFFFFF;        /* White background */
+  --primary: #FFD700;    /* Yellow accent */
+  --text: #000000;       /* Black text */
+  --accent: #EAEAEA;     /* Light gray for borders or subtle elements */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+header, section, footer {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to bottom right, #fffbe6, #ffffff);
+  border-bottom: 2px solid var(--accent);
+}
+
+.hero img {
+  width: 180px;
+  height: 195px;
+  border-radius: 50%;
+  border: 4px solid var(--primary);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 20px;
+  color: var(--text);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.buttons a {
+  padding: 12px 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  background: var(--primary);
+  color: var(--text);
+  border-radius: 50px;
+  margin: 10px;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.buttons a:hover {
+  background: #E6C200;
+  transform: translateY(-2px);
+}
+
+/* Section Titles */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-left: 5px solid var(--primary);
+  padding-left: 15px;
+  color: var(--text);
+}
+
+/* About Section */
+.about ul {
+  margin-top: 10px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.about ul li {
+  margin-bottom: 5px;
+}
+
+/* Skills Section */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.skill-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid var(--accent);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--text);
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.skill-card i {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+/* Projects Section */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--accent);
+  transition: box-shadow 0.3s ease;
+  color: var(--text);
+}
+
+.project:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.project h4 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+
+.project a {
+  color: var(--primary);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* Contact Section */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid var(--accent);
+  background: #fff;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  color: var(--text);
+  transition: border 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: 1px solid var(--primary);
+}
+
+.contact-form button {
+  padding: 12px 20px;
+  font-weight: 600;
+  background: var(--primary);
+  color: var(--text);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: #E6C200;
+  transform: scale(1.02);
+}
+
+.contact-icons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.contact-icons a {
+  margin: 0 12px;
+  font-size: 26px;
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+
+.contact-icons a:hover {
+  color: var(--primary);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  border-top: 1px solid var(--accent);
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #444;
+  margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .buttons a {
+    display: block;
+    margin: 10px auto;
+    width: fit-content;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <img src="AnjaliProfessionalPhoto.jpg" alt="Anjali Kumari Jaiswal">
+    <h1>Anjali Kumari Jaiswal</h1>
+    <p>Aspiring Software Developer | Tech Enthusiast | BCA Student</p>
+    <div class="buttons">
+      <a href="#">Download Resume</a>
+      <a href="https://github.com/AJS-007">View Projects</a>
+    </div>
+  </section>
+
+  <!-- About Me -->
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <p>I am Anjali Kumari Jaiswal, a passionate BCA undergraduate student interested in software development and web technologies. I enjoy building interactive web apps and continuously learning new tools and frameworks. My goal is to contribute to real-world tech solutions and become a full-stack developer.</p>
+    <ul>
+      <li><strong>Location:</strong> India</li>
+      <li><strong>Languages:</strong> English, Hindi</li>
+      <li><strong>Currently Learning:</strong> React & Backend APIs</li>
+    </ul>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2>Education</h2>
+    <p><strong>BCA – Bachelor of Computer Applications</strong></p>
+    <p>Arka Jain University, Jamshedpur</p>
+    <p>2023 – 2026</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card"><i class="fab fa-java"></i><p>ReactJs</p></div>
+      <div class="skill-card"><i class="fab fa-python"></i><p>NodeJs</p></div>
+      <div class="skill-card"><i class="fab fa-html5"></i><p>HTML</p></div>
+      <div class="skill-card"><i class="fab fa-css3-alt"></i><p>CSS</p></div>
+      <div class="skill-card"><i class="fab fa-js-square"></i><p>JavaScript</p></div>
+      <div class="skill-card"><i class="fas fa-database"></i><p>MySQL</p></div>
+      <div class="skill-card"><i class="fab fa-git-alt"></i><p>Git</p></div>
+      <div class="skill-card"><i class="fas fa-code"></i><p>VS Code</p></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project">
+        <h4>Portfolio Website</h4>
+        <p>Responsive personal website built using HTML, CSS, and JavaScript.</p>
+        <p><strong>Tech Stack:</strong> HTML, CSS, JS</p>
+        <a href="#">GitHub</a>
+      </div>
+      <div class="project">
+        <h4>Event Management System</h4>
+        <p>Fetches user data using an external API.</p>
+        <p><strong>Tech Stack:</strong> JS, API, HTML</p>
+        <a href="https://github.com/SomD007/Bookkaro">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications">
+    <h2>Certifications & Achievements</h2>
+    <ul>
+      <li>Frontend Development – Coursera</li>
+      <li>Machine Learning Basics – NPTEL</li>
+      <li>Top 16 in – College Hackathon 2025</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea id="animeFrame" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="contact-icons" style="margin-top:20px;">
+      <a href="mailto:anjali@example.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/AJS-007"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/anjalikumari"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Anjali Kumari Jaiswal & SD | All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Simple smooth scrolling (optional)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+
+
+    
+(function () {
+  const encoder = document.querySelector('.contact-form');
+  const decoder = document.getElementById('animeFrame');
+
+  // Obfuscated phrases (Base64 encoded versions of valid trigger strings)
+  const secrets = [
+    'YStz',                   // a+s
+    'cysx',                   // s+a
+    'YStT',                   // A+S
+    'UytB',                   // S+A
+    'c291bSthbmphbGk=',       // soum+anjali
+    'YW5qYWxpK3NvdW0=',       // anjali+soum
+    'U291bStBbmphbGk=',       // Soum+Anjali
+    'QW5qYWxpK1NvdW0='        // Anjali+Soum
+  ];
+
+  // Base64 encode and normalize input
+  const normalize = (str) => {
+    const cleaned = str.toLowerCase().replace(/\s+/g, '').replace(/\+/g, '+');
+    return btoa(cleaned);
+  };
+
+  encoder.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const coded = normalize(decoder.value);
+    if (secrets.includes(coded)) {
+      launchLoveDrop();
+    } else {
+      this.submit(); // fallback if not matched
+    }
+  });
+
+  function launchLoveDrop() {
+    const loveDiv = document.createElement('div');
+    loveDiv.className = 'animeLoveOverlay';
+
+    const decode = (b64) => decodeURIComponent(atob(b64).split('').map(function(c) {
+      return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+
+    const t = decode('4oioIFNvdW0gJiBBbmphbGkg4oii');
+    const b = decode('U29tZSBzdG9yaWVzIGRvbid0IG5lZWQgZXhwbGFuYXRpb24uPGJyPlRoaXMgb25lIGlzIHdyaXR0ZW4gaW4gYmluYXJ5IGFuZCBiZWF0cy4=');
+    const c = decode('8J+OoiBDbG9zZSDwn46i');
+
+    loveDiv.innerHTML = `
+      <div style="position:fixed;top:0;left:0;width:100%;height:100%;
+                  background:rgba(0,0,0,0.8);display:flex;
+                  justify-content:center;align-items:center;z-index:9999;">
+        <div style="background:#fff;padding:30px;border-radius:15px;
+                    max-width:400px;text-align:center;font-family:Poppins;">
+          <h2 style="color:#e91e63;">${t}</h2>
+          <p style="font-size:1.2rem;">${b}</p>
+          <button id="byeBtn" style="margin-top:15px;padding:8px 20px;
+                  background:#e91e63;border:none;border-radius:50px;color:#fff;
+                  cursor:pointer;">${c}</button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(loveDiv);
+    document.getElementById('byeBtn').onclick = () => loveDiv.remove();
+  }
+})();
+
+
+  </script>
+
+</body>
+</html>
